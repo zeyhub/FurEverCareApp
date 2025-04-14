@@ -8,6 +8,7 @@ import {
   CheckBox,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import AuthService from '../services/auth';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -15,11 +16,19 @@ const LoginScreen = ({ navigation }) => {
   const [secureText, setSecureText] = useState(true);
   const [rememberMe, setRememberMe] = useState(false);
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     console.log('E-posta:', email);
     console.log('Şifre:', password);
     console.log('Beni Hatırla:', rememberMe);
-    navigation.navigate('Home');
+
+    try {
+      const response = await AuthService.login(email, password);
+      console.log('Giriş başarılı:', response);
+      navigation.navigate('Home');
+    } catch (error) {
+      console.error('Giriş hatası:', error);
+      return;
+    }
   };
 
   return (
