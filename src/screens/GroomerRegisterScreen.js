@@ -29,6 +29,7 @@ const GroomerRegisterScreen = ({ navigation }) => {
     console.log('İlçe:', district);
     console.log('Mahalle:', neighborhood);
     console.log('İşletme Ruhsatı:', licenseDocument);
+    navigation.navigate('Verification', { userType: 'groomer' });
   };
 
   return (

@@ -29,6 +29,7 @@ const VeterinarianRegisterScreen = ({ navigation }) => {
     console.log('İlçe:', district);
     console.log('Mahalle:', neighborhood);
     console.log('Vergi Levhası:', taxDocument);
+    navigation.navigate('Verification' , { userType: 'veterinarian' });
   };
 
   return (

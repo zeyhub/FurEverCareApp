@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secureText, setSecureText] = useState(true);
@@ -19,6 +19,7 @@ const LoginScreen = () => {
     console.log('E-posta:', email);
     console.log('Şifre:', password);
     console.log('Beni Hatırla:', rememberMe);
+    navigation.navigate('Home');
   };
 
   return (
@@ -84,8 +85,10 @@ const LoginScreen = () => {
       <Text style={styles.or}>veya</Text>
 
       {/* Kayıt Ol butonu */}
-      <TouchableOpacity style={styles.outlinedButton}>
-      onPress={() => navigation.navigate('UserTypeSelect')}
+      <TouchableOpacity 
+        style={styles.outlinedButton}
+        onPress={() => navigation.navigate('UserTypeSelect')}
+        >
         <Text style={styles.outlinedText}>Kayıt Ol</Text>
       </TouchableOpacity>
     </View>

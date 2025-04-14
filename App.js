@@ -9,6 +9,10 @@ import VeterinarianRegisterScreen from './src/screens/VeterinarianRegisterScreen
 import GroomerRegisterScreen from './src/screens/GroomerRegisterScreen';
 import HotelRegisterScreen from './src/screens/HotelRegisterScreen';
 import CaregiverRegisterScreen from './src/screens/CaregiverRegisterScreen';
+import VerificationScreen from './src/screens/VerificationScreen';
+import RegistrationSuccessScreen from './src/screens/RegistrationSuccessScreen';
+import BottomTabNavigator from './src/navigation/BottomTabNavigator';
+import SavedPetsScreen from './src/screens/SavedPetsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +28,11 @@ export default function App() {
         <Stack.Screen name="GroomerRegister" component={GroomerRegisterScreen} />
         <Stack.Screen name="HotelRegister" component={HotelRegisterScreen} />
         <Stack.Screen name="CaregiverRegister" component={CaregiverRegisterScreen} />
+        <Stack.Screen name="Verification" component={VerificationScreen} />
+        <Stack.Screen name="RegisterSuccess" component={RegistrationSuccessScreen} />
+        <Stack.Screen name="Home" component={BottomTabNavigator} />
+        <Stack.Screen name="SavedPets" component={SavedPetsScreen} />
+        
         
       </Stack.Navigator>
     </NavigationContainer>

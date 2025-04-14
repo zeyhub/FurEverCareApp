@@ -25,6 +25,7 @@ const CaregiverRegisterScreen = ({ navigation }) => {
     console.log('Şifre:', password);
     console.log('İlçe:', district);
     console.log('Mahalle:', neighborhood);
+    navigation.navigate('Verification' , { userType: 'caregiver' });
   };
 
   return (

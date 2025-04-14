@@ -20,6 +20,7 @@ const PetOwnerRegisterScreen = ({ navigation }) => {
     console.log('E-posta:', email);
     console.log('Telefon:', phone);
     console.log('Şifre:', password);
+    navigation.navigate('Verification' , { userType: 'pet_owner' });
     // Burada backend API bağlantısı yapılacak.
   };
 

@@ -60,6 +60,7 @@ const UserTypeSelectScreen = ({ navigation }) => {
       onPress={() => handleSelect(item)}
     >
       <Image source={item.image} style={styles.icon} />
+      <Text style={styles.cardLabel}>{item.label}</Text>
     </TouchableOpacity>
   );
 
@@ -118,5 +119,12 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     resizeMode: 'contain',
+  },
+  cardLabel: {
+    marginTop: 8,
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#333',
+    textAlign: 'center',
   },
 });
