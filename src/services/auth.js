@@ -17,6 +17,12 @@ const AuthService = {
         const data = await response.json();
         return data;
     },
+
+    // register service
+    // send-verification-email
+    // verify-email/:token
+    // forgot-password
+    // reset-password
 }
 
 export default AuthService;
